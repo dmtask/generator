@@ -10,7 +10,9 @@
   <body>
     Generate Passworts:
     <button onclick="pwGenerate();">Generate</button>
+    <div id="passworts"></div>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="generator.js">;</script>
   </body>
 </html>
