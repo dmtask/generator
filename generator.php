@@ -12,7 +12,18 @@ if (!empty($_POST['length']) && !empty($_POST['chars']) && !empty($_POST['number
 }
 
 function generatePws($length, $chars, $numbers, $specialChars) {
+    $range = '';
+    if ($chars) {
+        $range .= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+    if ($numbers) {
+        $range .= '0123456789';
+    }
+    if ($specialChars) {
+        $range .= '!§$%&/()=?+*#-;.:,';
+    }
 
+    $generate_string = substr(str_shuffle(str_repeat($range, $length)), 0, $length);
 
-    return '';
+    return $generate_string;
 }
