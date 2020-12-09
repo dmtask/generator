@@ -1,12 +1,21 @@
 function pwGenerate() {
-    let defaults = {
-        'length': 8,
-        'chars': true,
-        'numbers': true,
-        'specialChars': true
-    };
+    let url = "generator.php",
+        lengthInput = $('.passwortLength').val(),
+        checkboxChars = $('#checkboxChars').is(':checked'),
+        checkboxSpecial = $('#checkboxSpecial').is(':checked'),
+        checkboxNumbers = $('#checkboxNumbers').is(':checked');
 
-    let url = "generator.php";
+    console.log(lengthInput);
+    console.log(checkboxChars);
+    console.log(checkboxSpecial);
+    console.log(checkboxNumbers);
+
+    let defaults = {
+        'length': (lengthInput !== '' ? parseInt(lengthInput) : 8),
+        'chars': checkboxChars,
+        'numbers': checkboxNumbers,
+        'specialChars': checkboxSpecial
+    };
 
     $.ajax({
         url: url,

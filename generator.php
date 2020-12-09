@@ -1,7 +1,5 @@
 <?php
 
-//print_r($_POST);
-
 if (!empty($_POST['length']) && !empty($_POST['chars']) && !empty($_POST['numbers']) && !empty($_POST['specialChars'])) {
     $length = htmlspecialchars($_POST['length']);
     $chars = htmlspecialchars($_POST['chars']);
@@ -13,13 +11,13 @@ if (!empty($_POST['length']) && !empty($_POST['chars']) && !empty($_POST['number
 
 function generatePws($length, $chars, $numbers, $specialChars) {
     $range = '';
-    if ($chars) {
+    if (parseStringToBoolean($chars)) {
         $range .= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     }
-    if ($numbers) {
+    if (parseStringToBoolean($numbers)) {
         $range .= '0123456789';
     }
-    if ($specialChars) {
+    if (parseStringToBoolean($specialChars)) {
         $range .= '!§$%&/()=?+*#-;.:,';
     }
 
@@ -27,3 +25,11 @@ function generatePws($length, $chars, $numbers, $specialChars) {
 
     return $generate_string;
 }
+
+function parseStringToBoolean($value) {
+    if ($value === "true") {
+       return true;
+    } else {
+       return false;
+    }
+ }
