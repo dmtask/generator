@@ -2,7 +2,23 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Passwort Generator - Einfach sichere Passwörter erstellen" />
     <meta name="keywords" content="Passwort, Passwort erstellen, erstellen, sicher, Passwörter, sichere Passwörter, generieren, passwort generator"/>
@@ -48,9 +64,17 @@
           <button type="button" class="btn btn-primary" onclick="pwGenerate();">Generiere</button>
         </div>
       </div>
-      <div class="row mt-2">
-        <div class="col-12">
+      <div class="row mt-2 ml-0 mr-0 passwort_container passwort_container_hide">
+        <div class="col-12 alert alert-success">
           <div id="passworts"></div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-6">
+          <!--Passwort Prüfung: Ist dein gewähltes Passwort sicher?-->
+        </div>
+        <div class="col-6">
+          <!-- TODO: Input Feld + Button einbauen -->
         </div>
       </div>
     </div>
@@ -60,6 +84,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">;</script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js">;</script>
-    <script type="text/javascript" src="generator.js">;</script>
+    <script type="text/javascript" src="assets/generator.js">;</script>
   </body>
 </html>

@@ -7,8 +7,11 @@ if (!empty($_POST['length']) && !empty($_POST['chars']) && !empty($_POST['number
     $specialChars = htmlspecialchars($_POST['specialChars']);
 
     echo generatePws($length, $chars, $numbers, $specialChars);
+} else {
+    http_response_code(400);
 }
 
+// Erstellt aus einem Zufallsstring ein Passwort
 function generatePws($length, $chars, $numbers, $specialChars) {
     $range = '';
     if (parseStringToBoolean($chars)) {
@@ -18,7 +21,7 @@ function generatePws($length, $chars, $numbers, $specialChars) {
         $range .= '0123456789';
     }
     if (parseStringToBoolean($specialChars)) {
-        $range .= '!§$%&/()=?+*#-;.:,';
+        $range .= '!$%&/()=?*#-;.:,';
     }
 
     $generate_string = substr(str_shuffle(str_repeat($range, $length)), 0, $length);
@@ -26,6 +29,7 @@ function generatePws($length, $chars, $numbers, $specialChars) {
     return $generate_string;
 }
 
+// Macht aus einem String einen korrekten Boolean Wert
 function parseStringToBoolean($value) {
     if ($value === "true") {
        return true;

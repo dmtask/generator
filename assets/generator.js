@@ -5,11 +5,6 @@ function pwGenerate() {
         checkboxSpecial = $('#checkboxSpecial').is(':checked'),
         checkboxNumbers = $('#checkboxNumbers').is(':checked');
 
-    console.log(lengthInput);
-    console.log(checkboxChars);
-    console.log(checkboxSpecial);
-    console.log(checkboxNumbers);
-
     let defaults = {
         'length': (lengthInput !== '' ? parseInt(lengthInput) : 8),
         'chars': checkboxChars,
@@ -23,5 +18,6 @@ function pwGenerate() {
         data: defaults
     }).done((data) => {
         $('#passworts').text(data);
+        $('.passwort_container').removeClass('passwort_container_hide');
     });
 }
