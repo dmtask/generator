@@ -69,17 +69,9 @@
           <div id="passworts"></div>
         </div>
       </div>
-      <div class="row mt-4">
-        <div class="col-6">
-          <!--Passwort Prüfung: Ist dein gewähltes Passwort sicher?-->
-        </div>
-        <div class="col-6">
-          <!-- TODO: Input Feld + Button einbauen -->
-        </div>
-      </div>
     </div>
     <footer>
-      Powered by <a href="http://dm-task.de" target="_blank">dm-task.de</a>
+      Powered by <a href="https://dmtask.web.app/" target="_blank">DM - Task</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">;</script>
