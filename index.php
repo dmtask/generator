@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-12">
           <b>Willkommen!</b> - Hier kannst du dir automatisch Passwörter generieren lassen. Als Voreinstellung besteht das Passwort aus 8 Zeichen, inkl. Zahlen und Sonderzeichen. Diese Einstellung kannst du 
-          unten ändern.
+          unten ändern. Natürlich ist diese Webseite noch nicht fertig und wird stetig weiter ausgebaut.
         </div>
       </div>
       <div class="row mt-4">
