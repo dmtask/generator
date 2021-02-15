@@ -21,3 +21,7 @@ function pwGenerate() {
         $('.passwort_container').removeClass('passwort_container_hide');
     });
 }
+
+function testPw() {
+    
+}

@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Passwort Generator - Einfach sichere Passwörter erstellen" />
     <meta name="keywords" content="Passwort, Passwort erstellen, erstellen, sicher, Passwörter, sichere Passwörter, generieren, passwort generator"/>
-    <meta name="author" content="Daniel Mertgen (dm-task.de)" />
+    <meta name="author" content="Daniel Mertgen (dmtask.web.app)" />
     <meta name="robots" content="index"/>
     <title>Passwort Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -62,12 +62,20 @@
       <div class="row mt-2">
         <div class="col-12">
           <button type="button" class="btn btn-primary" onclick="pwGenerate();">Generiere</button>
+          <button type="button" class="btn btn-danger" onclick="document.location.reload();">Reset</button>
         </div>
       </div>
       <div class="row mt-2 ml-0 mr-0 passwort_container passwort_container_hide">
         <div class="col-12 alert alert-success">
           <div id="passworts"></div>
         </div>
+      </div>
+      <div class="row mt-5 ml-0 mr-0">
+        <div class="col-4">Testen ob ein Passwort die richtigen Zeichen enthält. (<b>Wichtig: Hierbei wird kein Passwort an den Server geschickt!</b>)</div>
+        <div class="col-3">
+          <input class="form-control" type="text" value="" placeholder="Passwort" onkeyup="testPw();">
+        </div>
+        <div class="col-4"></div>
       </div>
     </div>
     <footer>
