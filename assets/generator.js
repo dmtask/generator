@@ -18,10 +18,16 @@ function pwGenerate() {
         data: defaults
     }).done((data) => {
         $('#passworts').text(data);
+        document.getElementById('hiddenPasswortField').value = data;
         $('.passwort_container').removeClass('passwort_container_hide');
     });
 }
 
-function testPw() {
-    
+function copy() {
+    let copyText = document.getElementById("hiddenPasswortField");
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
 }

@@ -3,8 +3,19 @@
     margin-right: 0;
 }
 
+.passwort_container svg.eva {
+    position: relative;
+    left: 99%;
+    cursor: pointer;
+}
+
 .passwort_container_hide {
     display: none;
+}
+
+#hiddenPasswortField {
+    position: absolute;
+    left: -9999px;
 }
 
 footer {

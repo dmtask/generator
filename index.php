@@ -68,14 +68,9 @@
       <div class="row mt-2 ml-0 mr-0 passwort_container passwort_container_hide">
         <div class="col-12 alert alert-success">
           <div id="passworts"></div>
+          <textarea type="text" id="hiddenPasswortField"></textarea>
+          <i data-eva="copy-outline" onclick="copy();"></i>
         </div>
-      </div>
-      <div class="row mt-5 ml-0 mr-0">
-        <div class="col-4">Testen ob ein Passwort die richtigen Zeichen enthält. (<b>Wichtig: Hierbei wird kein Passwort an den Server geschickt!</b>)</div>
-        <div class="col-3">
-          <input class="form-control" type="text" value="" placeholder="Passwort" onkeyup="testPw();">
-        </div>
-        <div class="col-4"></div>
       </div>
     </div>
     <footer>
@@ -85,5 +80,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">;</script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js">;</script>
     <script type="text/javascript" src="assets/generator.js">;</script>
+    <script src="https://unpkg.com/eva-icons">;</script>
+    <script>
+      eva.replace();
+    </script>
   </body>
 </html>
