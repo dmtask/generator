@@ -69,7 +69,7 @@
         <div class="col-12 alert alert-success">
           <div id="passworts"></div>
           <textarea type="text" id="hiddenPasswortField"></textarea>
-          <i data-eva="copy-outline" onclick="copy();"></i>
+          <i data-eva="copy-outline" onclick="copy();" title="In Zwischenablage kopieren"></i>
         </div>
       </div>
     </div>
